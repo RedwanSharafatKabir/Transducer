@@ -1,67 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="#EAEAEA">
 
-    <TextView
-        android:id="@+id/lightSensorOutputId"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/proximitySensorOutputId"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top|center"
+            android:background="@drawable/top_background"
+            android:paddingTop="30dp"
+            android:paddingBottom="50dp">
+
+            <ImageView
+                android:id="@+id/animatedImageId"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/motion_sensor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sensor Detection"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-35dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/firstlinearlayoutId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/proximityPageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cardview_background"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/proximity"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Proximity"
+                            android:textColor="#67079A"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lightSensorPageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cardview_background"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/light_sensor"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Luminosity"
+                            android:textColor="#67079A"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/secondlinearlayoutId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/accelerometerPageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cardview_background"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/accel"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Accelerometer"
+                            android:textColor="#67079A"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gyroscopePageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cardview_background"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/gyroscope"
+                            android:padding="20dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gyroscope"
+                            android:textColor="#67079A"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif"
-        android:layout_marginBottom="10dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:background="#fff"
+        android:layout_gravity="bottom">
 
-    <TextView
-        android:id="@+id/accelerometerSensorOutputId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_about_24"/>
 
-    <TextView
-        android:id="@+id/gyroscopeSensorOutputId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  About"
+            android:textColor="#67079A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:gravity="center"/>
 
-</LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

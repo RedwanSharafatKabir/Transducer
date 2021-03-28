@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:background="#67079A"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/backPageId4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="-30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:text="Transducer"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="Sensor Detector App"/>
+
+            <TextView
+                android:id="@+id/abtTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="Version: 1.1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="Developer:"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="Redwan Sharafat Kabir"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

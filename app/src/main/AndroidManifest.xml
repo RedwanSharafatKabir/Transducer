@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.transducer">
 
-    <uses-feature android:name="android.hardware.Sensor"
-        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.Sensor"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".MainActivity"
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".GyroscopeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LightSensorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProximityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccelerometerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +40,7 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".BroadCastReceiverServices.BroadCastService"/>
     </application>
 
 </manifest>
