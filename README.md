@@ -10,7 +10,7 @@ Sensor app featuring Accelerometer, Gyroscope, Light Sensor and Proximity Sensor
 #### Challenges -
 * To learn SQLite database Insert, Retrieve, Update and Delete operation
 * To learn sensor implementation in android application
-* For insufficient time I could not implement the chart to show the sensors value, I have shown the values of 4 sensors in a serialize textview from SQLite<br><br>
+* For insufficient time I could not implement the chart to show the sensors value, I have shown the values of 4 sensors in a serialized textview from SQLite<br><br>
 #### uses-feature in AndroidManifest.xml -
 * uses-feature android:name="android.hardware.Sensor"<br>android:required="true"
 * uses-feature android:name="android.hardware.sensor.accelerometer"<br>android:required="true"<br><br>
